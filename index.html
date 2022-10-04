@@ -11,29 +11,29 @@
   <body>
     <form action="/login" method="post">
       <div class="container">
-        <label for="uname">Username</label>
+        <label for="uname"><b>Username</b></label>
         <input
           type="text"
           id="uname"
           name="uname"
           placeholder="Enter Username"
         />
-        <label for="pword">Password</label>
+        <label for="pword"><b>Password</b></label>
         <input
           type="password"
           placeholder="Enter Password"
           id="pword"
           name="pword"
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </div>
       <script>
-        if (document.location.has === `#unauthorized`) {
+        if (document.location.hash === "#unauthorized") {
           document.write(
-            `<div class="unauthorized">Invalid Username Or Password</div>`
+            '<div class="unauthorized">Invalid Username or Password</div>'
           );
-        } else if (document.location.hash === `#error`) {
-          document.write(`<div class="error">An error has occured</div>`);
+        } else if (document.location.hash === "#error") {
+          document.write('<div class="error">An error has occured</div>');
         }
       </script>
     </form>
