@@ -1,14 +1,11 @@
-const http = require("http"),
-  path = require("path"),
-  express = require("express"),
-  bodyParser = require("body-parser");
+const express = require("express");
 const sqlite3 = require("sqlite3").verbose();
 
 const app = express();
 
 app.use(express.static("."));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const db = new sqlite3.Database(":memory:");
 db.serialize(function () {
@@ -23,8 +20,8 @@ app.get("/", function (req, res) {
 });
 
 app.post("/login", function (req, res) {
-  var username = req.body.username;
-  var password = req.body.password;
+  var username = req.body.uname;
+  var password = req.body.pword;
   var query =
     "SELECT title FROM user where username = '" +
     username +
