@@ -10,21 +10,16 @@
   </head>
   <body>
     <form action="/login" method="post">
+      <h2>Login to your account</h2>
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input
-          type="text"
-          id="uname"
-          name="uname"
-          placeholder="Enter Username"
-        />
-        <label for="pword"><b>Password</b></label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          id="pword"
-          name="pword"
-        />
+        <div class="input-parent">
+          <label><b>Username</b></label>
+          <input type="text" name="uname" placeholder="Enter Username" />
+        </div>
+        <div class="input-parent">
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pword" />
+        </div>
         <button type="submit">Login</button>
       </div>
       <script>
